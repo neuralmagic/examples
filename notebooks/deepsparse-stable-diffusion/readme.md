@@ -12,6 +12,7 @@ pip install git+https://github.com/neuralmagic/optimum-deepsparse.git
 ## Generate Image 
 
 ```python
+from optimum.deepsparse import DeepSparseStableDiffusionPipeline
 model_id = "stabilityai/stable-diffusion-2-1"
 pipeline = DeepSparseStableDiffusionPipeline.from_pretrained(model_id,export=True)
 prompt = "Surrealist painting of a floating island with giant clock gears, populated with mythical creatures."
