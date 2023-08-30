@@ -61,5 +61,5 @@ line_annotator.annotate(frame=frame, line_counter=line_counter)
 %matplotlib inline
 sv.plot_image(frame, (16, 16))
 ```
-![Car Tracking Results](image.png)
+![Car Tracking Results](result.png)
 Check out the notebook for how to perform tracking, counting, detection and annotation on the entire video. 
