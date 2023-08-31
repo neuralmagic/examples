@@ -1,3 +1,3 @@
-# Sparsify
+# Using Sparsify One-Shot for Sparsifying MiniLM for a Semantic Search Use-Case
 
-This notebook illustrates how to use Sparsify's One-Shot method to sparsify a MiniLM model for generating sentence embeddings in a Weaviate vector database.
+In this notebook, we aim to explore the capabilities of the innovative Sparsify one-shot method for quantizing a dense [MiniLM](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) model, thereby simplifying the DevOps workflow. We will also walk you through the process of abstracting ONNX exportation and optimization by utilizing the [DeepSparse Optimum integration](https://github.com/neuralmagic/optimum-deepsparse). Finally, we will evaluate and compare the accuracy and latency of both the dense and quantized MiniLM models. To demonstrate their effectiveness, we'll employ the Weaviate vector database to efficiently index and search embeddings, underlining the preservation of MiniLM's semantic search functionalities despite the use of INT8 quantization and one-shot weight pruning.
