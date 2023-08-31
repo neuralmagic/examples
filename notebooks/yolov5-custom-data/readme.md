@@ -1,5 +1,5 @@
 # Sparsify YOLOv5 Models Trained With Ultralytics
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neuralmagic/notebooks/blob/main/notebooks/yolov5-custom-data/yolov5-custom-data.ipynb)
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neuralmagic/examples/blob/main/notebooks/yolov5-custom-data/yolov5_custom_data.ipynb)
 
 YOLOv5 by Ultralytics is one of the most popular object detection models. In this notebook, we will look at how to fine-tune the model on a custom dataset. 
 
