@@ -33,7 +33,7 @@ learn how to deploy the resulting model on CPU using DeepSparse.
 ### Run Hugging Face Models on DeepSparse
 [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neuralmagic/notebooks/blob/main/notebooks/optimum-deepsparse/optimum-deepsparse.ipynb)
 
-DeepSparse supports numerous transformer models. This notebook, illustrates how to pull models from Hugging Face using 
+DeepSparse supports numerous transformer models. This notebook illustrates how to pull models from Hugging Face using 
 Optimum and run them on CPU using DeepSparse. 
 
 ![Optimum notebook](images/optimum.png)
