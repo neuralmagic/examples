@@ -1,0 +1,9 @@
+datasets
+transformers
+git+https://github.com/neuralmagic/deepsparse
+chainlit
+langchain
+sentence_transformers
+chromadb
+git+https://github.com/openai/whisper.git
+pytube

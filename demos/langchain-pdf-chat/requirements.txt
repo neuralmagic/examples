@@ -1,0 +1,8 @@
+datasets
+transformers
+git+https://github.com/neuralmagic/deepsparse
+chainlit
+langchain
+PyPDF2
+sentence_transformers
+chromadb
