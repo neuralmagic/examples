@@ -1,4 +1,4 @@
-# RUN LLMs on CPU With LangChain and DeepSparse: Chat With PDF Demo
+# Run LLMs on CPU With LangChain and DeepSparse: Chat With PDF Demo
 
 [![HF](https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-lg.svg)](https://huggingface.co/spaces/neuralmagic/pdfchat)
 
