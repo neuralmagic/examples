@@ -32,8 +32,12 @@ Step 5: Install `torch-nightly`
 pip install --pre torch --index-url https://download.pytorch.org/whl/nightly/
 ```
 
-After running these stsps succesfully, download sample images for inference.
-
+After running these stsps succesfully, download sample images for inference:
+```bash
+wget -O basilica.jpg https://raw.githubusercontent.com/neuralmagic/deepsparse/main/src/deepsparse/yolo/sample_images/basilica.jpg
+wget -O buddy.jpeg https://raw.githubusercontent.com/neuralmagic/deepsparse/main/tests/deepsparse/pipelines/sample_images/buddy.jpeg
+wget -O thailand.jpg https://raw.githubusercontent.com/neuralmagic/deepsparse/main/src/deepsparse/yolact/sample_images/thailand.jpg
+```
 <p float="left">
   <img src="https://raw.githubusercontent.com/neuralmagic/deepsparse/main/src/deepsparse/yolo/sample_images/basilica.jpg" width="300" />
   <img src="https://raw.githubusercontent.com/neuralmagic/deepsparse/main/tests/deepsparse/pipelines/sample_images/buddy.jpeg" width="300" /> 
