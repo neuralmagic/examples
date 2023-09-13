@@ -1,5 +1,5 @@
 # How to use DeepSparse YOLOv5 and YOLOv8 Pipelines With Supervision
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neuralmagic/notebooks/blob/main/examples/supervision/supervision.ipynb)
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neuralmagic/examples/blob/main/notebooks/supervision/supervision.ipynb)
 
 [DeepSparse](https://github.com/neuralmagic/deepsparse) offers accelerated inference on CPUs for natural language and computer vision tasks, leading 
 to GPU-class performance on CPUs. DeepSparse does this purely in software by taking advantage of sparse models.
