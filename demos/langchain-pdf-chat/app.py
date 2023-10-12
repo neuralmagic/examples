@@ -17,7 +17,7 @@ import PyPDF2
 MODEL_PATH = "zoo:mpt-7b-gsm8k_mpt_pretrain-pruned60_quantized"
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2", model_kwargs={'device': 'cpu'})
-llm = DeepSparse(model=MODEL_PATH, config=config)
+llm = DeepSparse(model=MODEL_PATH)
 
 system_template = """Use the following pieces of context to answer the users question.
 If you don't know the answer, just say that you don't know, don't try to make up an answer.
