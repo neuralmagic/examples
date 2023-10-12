@@ -14,7 +14,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from io import BytesIO
 import PyPDF2
 
-MODEL_PATH = "zoo:mpt-7b-gsm8k_mpt_pretrain-pruned60_quantized"
+MODEL_PATH = "hf:neuralmagic/mpt-7b-chat-pruned50-quant"
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2", model_kwargs={'device': 'cpu'})
 llm = DeepSparse(model=MODEL_PATH)
