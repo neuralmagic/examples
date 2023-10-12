@@ -1,6 +1,6 @@
 datasets
 transformers
-deepsparse-nightly==1.6.0.2023100
+deepsparse-nightly==1.6.0.20231007
 chainlit
 langchain
 sentence_transformers
