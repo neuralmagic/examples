@@ -14,10 +14,9 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from io import BytesIO
 import PyPDF2
 
-MODEL_PATH = "PATH_TO_MODEL"
+MODEL_PATH = "zoo:mpt-7b-gsm8k_mpt_pretrain-pruned60_quantized"
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2", model_kwargs={'device': 'cpu'})
-config = {"sequence_length": 2048, "trust_remote_code": True, "prompt_sequence_length": 1}
 llm = DeepSparse(model=MODEL_PATH, config=config)
 
 system_template = """Use the following pieces of context to answer the users question.
