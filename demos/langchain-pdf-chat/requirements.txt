@@ -1,0 +1,8 @@
+datasets
+transformers
+deepsparse-nightly==1.6.0.20231007
+chainlit
+langchain
+PyPDF2
+sentence_transformers
+chromadb
