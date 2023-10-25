@@ -1,0 +1,3 @@
+deepsparse-nightly==1.6.0.20231007
+transformers
+gradio
