@@ -1,0 +1,3 @@
+deepsparse-nightly[llm]==1.6.0.20231020
+transformers
+gradio
