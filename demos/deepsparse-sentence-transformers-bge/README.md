@@ -27,3 +27,7 @@ pip install mteb
 ```
 
 > Note: you may need to run `sudo apt install build-essential python3-dev` for MTEB to install properly.
+
+## Running Inference
+
+Checkout [the Jupyter notebook](example.ipynb) for example usage.
