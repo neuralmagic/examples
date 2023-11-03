@@ -28,7 +28,7 @@ print(result.generations[0].text)
 
 ```
 ## Text Generation Parameters
-[DeepSparse](https://github.com/neuralmagic/deepsparse/) allows you to set different text generation parameters. 
+[DeepSparse](https://github.com/neuralmagic/deepsparse/) supports different [text generation parameters](https://github.com/neuralmagic/deepsparse/blob/main/src/deepsparse/transformers/text_generation.md), including:
 
 ### Temperature
 
