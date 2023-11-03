@@ -19,7 +19,7 @@ text_pipeline = TextGeneration(model_path=MODEL_PATH, sequence_length=2048)
 generation_config = {"top_k": 50, "max_new_tokens": 300}
 
 result = text_pipeline(
-    prompt="Translate the following sentence to French `Today is a good day to go out and play football because it is sunny. After that, you can consider, visiting the national park for a nature walk while seeing some wild animals.`",
+    prompt="Translate the following sentence to French `Today is a good day to go out and play football because it is sunny. After that, you can consider visiting the national park for a nature walk while seeing some wild animals.`",
     generation_config=generation_config,
 )
 print(result.generations[0].text)
@@ -28,11 +28,11 @@ print(result.generations[0].text)
 
 ```
 ## Text Generation Parameters
-[DeepSparse](https://github.com/neuralmagic/deepsparse/) allows to set different text generation parameters. 
+[DeepSparse](https://github.com/neuralmagic/deepsparse/) allows you to set different text generation parameters. 
 
 ### Temperature
 
-The temperature parameter is used to MODIFY the logits. The logits are passed to the softmax function to turn them into probabilities, making it easier to pick the next word. 
+The temperature parameter is used to modify the logits. The logits are passed to the softmax function to turn them into probabilities, making it easier to pick the next word. 
 
 When the temperature is 1, the operation is the same as that of a normal softmax operation. 
 
