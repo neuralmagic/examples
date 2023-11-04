@@ -42,7 +42,6 @@ For more detailed examples and parameter explanations, please refer to the noteb
 
 Temperature is a hyperparameter that controls the randomness of predictions by scaling the logits before applying softmax. When set to 1, the model behaves normally, sampling each word according to its probability. Lower temperatures lead to less randomness and more confident outputs, while higher temperatures encourage diversity and creativity in the text generated.
 
-Here's a more detailed explanation of its effects:
 - **High Temperature (e.g., >1):** The model's outputs become more random and potentially more creative. It's like heating the decision space - more words get a chance to be chosen, even those with lower initial probabilities.
 - **Low Temperature (e.g., <1):** The model's outputs become more deterministic. Lower temperatures effectively sharpen the distribution, making the model more conservative and more likely to repeat the most probable sequences of words.
 
@@ -50,7 +49,6 @@ Here's a more detailed explanation of its effects:
 
 The `top_k` sampling parameter restricts the model's choice to the K most likely next words. Setting `top_k` to 50, for example, means that the model only considers the top 50 words sorted by probability to continue the sequence for each step in the generation.
 
-Pros and Cons:
 - **Pros:** By constraining the model's choices, `top_k` sampling often leads to more coherent and contextually appropriate text.
 - **Cons:** It can exclude potentially fitting choices, especially when the set K is small, limiting creativity and variability in scenarios like storytelling or poetry generation.
 
@@ -60,7 +58,6 @@ Nucleus sampling, or `top_p` sampling, dynamically determines the number of word
 
 For example, if `top_p` is set to 0.8, the model will sum the probabilities from the highest down until it adds up to 0.8, and then sample only from this subset of words.
 
-Pros and Cons:
 - **Pros:** This approach allows for dynamic variability, balancing the randomness and determinism based on the actual probability distribution of the next word.
 - **Cons:** It may occasionally include very improbable words if they are part of the cumulative set that reaches the desired probability threshold.
 
@@ -68,7 +65,7 @@ Pros and Cons:
 
 The repetition penalty parameter helps prevent the model from repeating the same words and phrases, enhancing the text's readability and originality. A penalty of 1.0 means no penalty is applied, and as the value increases, the model becomes less likely to repeat recent words.
 
-Application:
+Applications:
 - **Creative Writing:** Increasing the repetition penalty can help produce more diverse and interesting text by discouraging the model from reusing the same language.
 - **Informational Text:** A lower or no repetition penalty may be appropriate when the repetition of certain terms is necessary for clarity or emphasis.
 
