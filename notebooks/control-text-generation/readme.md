@@ -1,6 +1,6 @@
 # How to Control Text Generation with DeepSparse
 
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neuralmagic/notebooks/blob/main/notebooks/generate-text/How-to-Control-Text-Generation-With-DeepSparse.ipynb)
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/neuralmagic/notebooks/blob/main/notebooks/control-text-generation/How-to-Control-Text-Generation-With-DeepSparse.ipynb)
 
 This notebook walks through different strategies for generating text using DeepSparse on CPUs.
 
