@@ -1,6 +1,6 @@
 # LLM text generation on Windows using WSL and DeepSparse Server
 
-Here is a guide for running a large language model (LLM) for text generation on Windows using Windows Subsystem for Linux (WSL) and DeepSparse Server
+Here is a guide for running a large language model (LLM) for text generation on Windows using the Windows Subsystem for Linux (WSL) together with the DeepSparse Server
 
 ### Prerequisites
 - Windows 10 or 11 Operating System
@@ -27,7 +27,7 @@ Here is a guide for running a large language model (LLM) for text generation on 
    - Create a virtual environment: `python3 -m venv llm-env`
    - Activate the environment: `source llm-env/bin/activate`
 
-## Step 3: Install DeepSparse and OpenAI
+## Step 3: Install DeepSparse, DeepSparse Server, and OpenAI
 **Install DeepSparse with LLM+Server dependencies and OpenAI for easy integration**: 
    - In your virtual environment, run: `pip install deepsparse-nightly[llm,server] openai`
 
