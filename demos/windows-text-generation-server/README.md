@@ -35,6 +35,7 @@ Here is a guide for running a large language model (LLM) for text generation on 
 **Run the DeepSparse Server**: 
    - Execute: `deepsparse.server --task text-generation --integration openai --model_path hf:neuralmagic/mpt-7b-chat-pruned50-quant`
    - This command downloads and starts a server hosting the model as a RESTful endpoint with an OpenAI API compatible endpoint.
+   - If you want to run other models, explore the [other optimized models on SparseZoo](https://sparsezoo.neuralmagic.com/?task=text_generation).
    - If you would like to learn about non-server inference, [check out the text generation pipeline documentation](https://github.com/neuralmagic/deepsparse/blob/main/docs/llms/text-generation-pipeline.md).
    - Keep this terminal open. The server must remain running to handle requests.
 
