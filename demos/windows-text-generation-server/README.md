@@ -6,7 +6,7 @@ Here is a guide for running a large language model (LLM) for text generation on 
 - Windows 10 or 11 Operating System
 - Basic familiarity with command line operations
 
-### Step 1: Install Windows Subsystem for Linux (WSL)
+## Step 1: Install Windows Subsystem for Linux (WSL)
 
 **Enable WSL**:
    - See the [official documentation](https://learn.microsoft.com/en-us/windows/wsl/install) for the most up-to-date instructions
@@ -14,7 +14,7 @@ Here is a guide for running a large language model (LLM) for text generation on 
    - After the installation, set up your Linux distribution following the on-screen instructions.
    - Restart your computer if required.
 
-### Step 2: Set Up Python Environment
+## Step 2: Set Up Python Environment
 
 **Open your Linux distribution (e.g., Ubuntu) from the Start Menu.**
 
@@ -27,11 +27,11 @@ Here is a guide for running a large language model (LLM) for text generation on 
    - Create a virtual environment: `python3 -m venv llm-env`
    - Activate the environment: `source llm-env/bin/activate`
 
-### Step 3: Install DeepSparse and OpenAI
+## Step 3: Install DeepSparse and OpenAI
 **Install DeepSparse with LLM+Server dependencies and OpenAI for easy integration**: 
    - In your virtual environment, run: `pip install deepsparse-nightly[llm,server] openai`
 
-### Step 4: Start DeepSparse Server
+## Step 4: Start DeepSparse Server
 **Run the DeepSparse Server**: 
    - Execute: `deepsparse.server --task text-generation --integration openai --model_path hf:neuralmagic/mpt-7b-chat-pruned50-quant`
    - This command downloads and starts a server hosting the model as a RESTful endpoint with an OpenAI API compatible endpoint.
@@ -40,7 +40,7 @@ Here is a guide for running a large language model (LLM) for text generation on 
 
 ![Screenshot 2023-11-12 142904](https://github.com/neuralmagic/examples/assets/3195154/8ea079a1-b7c8-40e0-9e65-920f8d820a3d)
 
-### Step 5: Interact with the Model
+## Step 5: Interact with the Model
 **Open Another Terminal**:
    - Ensure that your virtual environment is activated in this new terminal as well.
 
@@ -86,7 +86,7 @@ else:
 
 ![Screenshot 2023-11-12 150608](https://github.com/neuralmagic/examples/assets/3195154/b3247a24-e810-414c-90e6-7e8f30502385)
 
-### Notes
+## Notes
 - **WSL Version**: Ensure you have WSL 2 for better performance and compatibility.
 - **Virtual Environment**: Using a virtual environment is recommended to avoid conflicts with system-wide Python packages.
 - **DeepSparse Server**: The server command might require adjustments depending on the model you wish to use or any updates to the DeepSparse package.
