@@ -3,7 +3,7 @@
 Here is a guide for running a large language model (LLM) for text generation on Windows using Windows Subsystem for Linux (WSL) and DeepSparse Server
 
 ### Prerequisites
-- Windows Operating System
+- Windows 10 or 11 Operating System
 - Basic familiarity with command line operations
 
 ### Step 1: Install Windows Subsystem for Linux (WSL)
