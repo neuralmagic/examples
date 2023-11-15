@@ -1,0 +1,9 @@
+pypdf
+langchain
+torch
+transformers
+datasets
+sentence_transformers
+faiss_cpu
+chainlit
+deepsparse-nightly[llm]
