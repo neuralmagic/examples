@@ -4,7 +4,7 @@ This is a medical bot built using MPT and Sentence Transformers. The bot is powe
 ## Installation
 
 ```bash
-pip install -r requrements.txt
+pip install -r requirements.txt
 ```
 
 ## Start with Chainlit
