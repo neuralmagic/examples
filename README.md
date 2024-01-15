@@ -4,9 +4,7 @@ Deep learning models have grown bigger over the years making their deployment co
 is building model optimization tools to change this narrative.  We provide tools for optimizing these models to make them more 
 performant and easier to deploy. For example, you can use [SparseML](https://github.com/neuralmagic/sparseml) to
 make your model sparse in a couple of lines of code. Neural Magic also provides numerous optimized natural language and computer  vision models on the
-[SparseZoo](https://sparsezoo.neuralmagic.com/). [Sparsify](https://github.com/neuralmagic/sparsify)
-provides a simple web application and CLI for applying state-of-the-art model optimization techniques on your model without 
-sacrificing accuracy. When you are ready to move to production, you can take advantage of the [DeepSparse](https://github.com/neuralmagic/deepsparse) 
+[SparseZoo](https://sparsezoo.neuralmagic.com/). When you are ready to move to production, you can take advantage of the [DeepSparse](https://github.com/neuralmagic/deepsparse) 
 inference runtime to achieve GPU-class performance on commodity CPUs. 
 
 In this repository, you will find examples that show how to use Neural Magic's tools to apply optimizations on your models.
