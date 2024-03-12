@@ -1,16 +1,12 @@
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.vectorstores import Chroma
 from langchain.chains import RetrievalQA
-from langchain.prompts.chat import (
-    ChatPromptTemplate,
-    SystemMessagePromptTemplate,
-    HumanMessagePromptTemplate,
-)
+
 import os
 import chainlit as cl
 
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.llms import DeepSparse
+from langchain_community.vectorstores import Chroma
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.llms import DeepSparse
 
 from pytube import YouTube
 import whisper
@@ -19,7 +15,7 @@ import tempfile
 MODEL_PATH = "hf:neuralmagic/mpt-7b-chat-pruned50-quant"
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2", model_kwargs={'device': 'cpu'})
-llm = DeepSparse(model=MODEL_PATH)
+llm = DeepSparse(model=MODEL_PATH,generation_config={})
 model = whisper.load_model("base")
 
 def transcribe(youtube_url, model):

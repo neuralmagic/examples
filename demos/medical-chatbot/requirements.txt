@@ -1,5 +1,4 @@
 pypdf
-langchain
 torch
 transformers
 datasets
@@ -7,3 +6,5 @@ sentence_transformers
 faiss_cpu
 chainlit
 deepsparse-nightly[llm]
+langchain-community==0.0.27
+langchain==0.1.11

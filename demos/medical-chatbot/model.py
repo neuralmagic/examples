@@ -1,10 +1,9 @@
-from langchain.document_loaders import PyPDFLoader, DirectoryLoader
 from langchain.prompts import PromptTemplate
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.vectorstores import FAISS
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.vectorstores import FAISS
 from langchain.chains import RetrievalQA
 import chainlit as cl
-from langchain.llms import DeepSparse
+from langchain_community.llms import DeepSparse
 import os
 
 MODEL_PATH = os.environ.get("MODEL_PATH") or "hf:neuralmagic/mpt-7b-chat-pruned50-quant"
