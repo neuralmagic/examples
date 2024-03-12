@@ -1,23 +1,20 @@
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.vectorstores import Chroma
+from langchain_community.vectorstores import Chroma
 from langchain.chains import RetrievalQA
-from langchain.prompts.chat import (
-    ChatPromptTemplate,
-    SystemMessagePromptTemplate,
-    HumanMessagePromptTemplate,
-)
 import os
 import chainlit as cl
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.llms import DeepSparse
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.llms import DeepSparse
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from io import BytesIO
 import PyPDF2
+from langchain_community.document_loaders import PyPDFLoader
 
 MODEL_PATH = "hf:neuralmagic/mpt-7b-chat-pruned50-quant"
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2", model_kwargs={'device': 'cpu'})
-llm = DeepSparse(model=MODEL_PATH)
+llm = DeepSparse(model=MODEL_PATH,streaming=True,generation_config={})
+Loader = PyPDFLoader
 
 @cl.on_chat_start
 async def init():
@@ -37,16 +34,11 @@ async def init():
     if file.type != "application/pdf":
         raise TypeError("Only PDF files are supported")
         
-    pdf_stream = BytesIO(file.content)
-    pdf = PyPDF2.PdfReader(pdf_stream)
-    pdf_text = ""
-    for page in pdf.pages:
-        pdf_text += page.extract_text()
-        
-    # texts = text_splitter.create_documents(pdf_text)
-    texts = text_splitter.create_documents([pdf_text])
+    loader = Loader(file.path)
+    documents = loader.load()
+    
+    texts = text_splitter.split_documents(documents)
     for i, text in enumerate(texts): text.metadata["source"] = f"{i}-pl"
-        
 
     # Create a Chroma vector store
     docsearch = Chroma.from_documents(texts, embeddings)
@@ -69,15 +61,14 @@ async def init():
 
     cl.user_session.set("chain", chain)
 
-
 @cl.on_message
-async def main(message):
+async def main(message: cl.Message):
     chain = cl.user_session.get("chain")  # type: RetrievalQAWithSourcesChain
     cb = cl.AsyncLangchainCallbackHandler(
-        stream_final_answer=True, answer_prefix_tokens=["FINAL", "ANSWER"]
+        stream_final_answer=True, answer_prefix_tokens=["FINAL", "ANSWER"] 
     )
     cb.answer_reached = True
-    res = await chain.acall(message, callbacks=[cb])
+    res = await chain.acall(message.content, callbacks=[cb])
 
     answer = res["result"]
     source_documents = res["source_documents"]
