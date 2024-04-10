@@ -39,5 +39,5 @@ Optimum and run them on CPU using DeepSparse.
 ## Bugs and Contribution 
 Let us know in case something isn't working by [creating an issue](https://github.com/neuralmagic/examples/issues). You 
 can also propose a fix by [submitting a pull request](https://github.com/neuralmagic/examples/pulls). Join our 
-[Slack community](https://join.slack.com/t/discuss-neuralmagic/shared_invite/zt-q1a1cnvo-YBoICSIw3L1dmQpjBeDurQ) to 
+[Slack community](https://neuralmagic.com/community/) to 
 engage with other practitioners or inform us of any examples you'd like to see. 
