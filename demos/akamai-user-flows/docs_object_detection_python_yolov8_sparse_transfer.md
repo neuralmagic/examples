@@ -300,7 +300,7 @@ Checkout the [DeepSparse repository for more details](https://github.com/neuralm
 !pip install "deepsparse[yolov8]"
 ```
 
-## Example Imge
+## Example Usage
 
 The following example uses pipelines to run a pruned and quantized YOLOv8 model for inference. As input, the pipeline ingests a list of images and returns for each image the detection boxes in numeric form.
 
