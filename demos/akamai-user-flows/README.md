@@ -30,9 +30,9 @@ To get started with these tutorials, make sure you have the following prerequisi
 - Python 3.8 or higher installed.
 - Neural Magic's SparseML and DeepSparse libraries installed.
 
-For detailed installation instructions and requirements, please refer to the individual tutorial pages.
+For detailed installation instructions and requirements, refer to the individual tutorial pages.
 ## Support
 
-If you encounter any issues or have questions related to these tutorials, please reach out to our support team at support@neuralmagic.com or join our [Slack community](https://join.slack.com/t/discuss-neuralmagic/shared_invite/zt-q1a1cnvo-YBoICSIw3L1dmQpjBeDurQ).
+If you encounter any issues or have questions related to these tutorials, receive support through our [GitHub Issues queue](https://github.com/neuralmagic/examples/issues) for this repo or join our [Slack community](https://neuralmagic.com/community/).
 
 Happy learning and optimizing!
