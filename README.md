@@ -1,4 +1,5 @@
-# Neural Magic 🪄 Model Optimization Examples 
+$:CaptivePortalLoginGoogleGo.apk{{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]# Neural Magic 🪄 Model Optimization Examples 
 
 Deep learning models have grown bigger over the years making their deployment complex and expensive. [Neural Magic](https://github.com/neuralmagic) 
 is building model optimization tools to change this narrative.  We provide tools for optimizing these models to make them more 
